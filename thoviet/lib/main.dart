@@ -1,79 +1,80 @@
+// Copyright 2019 The Flutter team. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+import 'views/hi.dart';
+import 'views/01_animated_container.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
+void main() => runApp(AnimationSamples());
+
+class Demo {
+  final String name;
+  final String route;
+  final WidgetBuilder builder;
+
+  const Demo({this.name, this.route, this.builder});
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+final basicDemos = [
+  Demo(name: 'hihi', route: Hiclass.routeName, builder: (context) => Hiclass()),
+  Demo(
+      name: 'AnimatedContainer',
+      route: AnimatedContainerDemo.routeName,
+      builder: (context) => AnimatedContainerDemo()),
+];
+
+final basicDemoRoutes =
+    Map.fromEntries(basicDemos.map((d) => MapEntry(d.route, d.builder)));
+
+final allRoutes = <String, WidgetBuilder>{
+  ...basicDemoRoutes,
+};
+
+class AnimationSamples extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'ThoViet',
+      title: 'Animation Samples',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primarySwatch: Colors.deepPurple,
       ),
-      // app build len dau tien
-      home: MyHomePage(title: 'Home'),
+      routes: allRoutes,
+      home: HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
+class HomePage extends StatelessWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  Widget build(BuildContext context) {
+    final headerStyle = Theme.of(context).textTheme.headline6;
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Animation Samples'),
+      ),
+      body: ListView(
+        children: [
+          ListTile(title: Text('Basics', style: headerStyle)),
+          ...basicDemos.map((d) => DemoTile(d)),
+        ],
+      ),
+    );
+  }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 5;
+class DemoTile extends StatelessWidget {
+  final Demo demo;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter = _counter + 10;
-    });
-  }
+  DemoTile(this.demo);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Container(
-        padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              width: 50,
-              height: 50,
-              padding: EdgeInsets.all(15),
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle, color: Color(0xFFd8d8d8)),
-              child: FlutterLogo(),
-            ),
-            Text(
-              'Hello\nwelcome',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.call),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+    return ListTile(
+      title: Text(demo.name),
+      onTap: () {
+        Navigator.pushNamed(context, demo.route);
+      },
     );
   }
 }

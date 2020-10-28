@@ -10,13 +10,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'ThoViet',
       theme: ThemeData(
         primarySwatch: Colors.amber,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // app build len dau tien
-      home: MyHomePage(title: 'Trang Chủ'),
+      home: MyHomePage(title: 'Home'),
     );
   }
 }
@@ -30,11 +30,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 3;
+  int _counter = 5;
 
   void _incrementCounter() {
     setState(() {
-      ++_counter;
+      _counter = _counter + 10;
     });
   }
 
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: Icon(Icons.call),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

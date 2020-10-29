@@ -1,29 +1,29 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 
-class ThoDien extends StatelessWidget {
-  const ThoDien({Key key}) : super(key: key);
+class ThoDienNuoc extends StatelessWidget {
+  const ThoDienNuoc({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Thợ Điện'),
+        title: Text('Thợ Điện Nước'),
       ),
-      body: ThoDienWidget(),
+      body: ThoDienNuocWidget(),
     );
   }
 }
 
-class ThoDienWidget extends StatefulWidget {
-  static String routeName = 'views/thoDien';
+class ThoDienNuocWidget extends StatefulWidget {
+  static String routeName = 'views/thoDienNuoc';
 
   @override
-  State<StatefulWidget> createState() => ThoDienStateWidget();
+  _ThoDienNuocState createState() => _ThoDienNuocState();
 }
 
-class ThoDienStateWidget extends State<ThoDienWidget> {
+class _ThoDienNuocState extends State<ThoDienNuocWidget> {
   Widget titleSection = new Container(
-    padding: const EdgeInsets.fromLTRB(15.0, 10.0, 15.0, 15.0),
+    padding: const EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 15.0),
     child: new Row(
       children: <Widget>[
         new Expanded(
@@ -31,107 +31,33 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            new Image.network(
-              "https://thoviet.com.vn/wp-content/uploads/2017/04/tho-dien-nuoc-tphcm-quan-4.jpg",
-              fit: BoxFit.cover,
-              width: 400,
-              height: 150,
-            ),
             Padding(padding: EdgeInsets.all(5)),
             new Text(
-                "- Thợ sửa điện nhà tại TP Hồ Chí Minh, dịch vụ nhanh chóng chất lượng, uy tín, bảo hành dài lâu."),
+                "Với đội ngũ thợ điện nước chuyên nghiệp, Thợ Việt nhận  thi công, lắp đặt, sửa chữa hệ thống điện, hệ thống cấp thoát nước cho gia đình, cơ quan, công ty, xí nghiệp."),
             new Text(
-                "- Dịch vụ sửa điện tại nhà, công ty, cơ quan, văn phòng tại Tp Hồ Chí Minh."),
+                "– Thợ lắp đặt điện nước dân dụng, lắp đặt điện nước gia đình, cơ quan, công ty."),
             new Text(
-                "- Dịch vụ sửa chữa điện với đội ngũ nhân viên kỹ thuật điện chuyên nghiệp, tận tâm, nhiệt tình, vui vẻ."),
+                "– Thợ sửa chữa điện nước tại nhà chuyên sửa chữa điện 1 pha, điện 3 pha công nghiệp."),
+            new Text("– Công ty Thợ Việt nhận làm từ những việc nhỏ nhất."),
+            new Text("– Mạng lưới phục vụ khắp các quận Tp.Hồ Chí Minh."),
             new Text(
-                "- Có hoá đơn VAT, phiếu thu, giấy biên nhận giao hàng, chứng từ đầy đủ để khách hàng tiện thanh toán."),
-            new Text(
-              "BẢNG GIÁ LẮP ĐẶT - SỬA CHỮA ĐIỆN TẠI NHÀ:",
+              "Thợ Điện Nước Tại TPHCM",
               textAlign: TextAlign.center,
               style: new TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
             ),
-            new Card(
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2019/01/tho-lap-dat-dong-ho-dien-1-pha-3-pha-tphcm-1.jpg',
-                    width: 400,
-                    height: 180,
-                    fit: BoxFit.cover,
-                  ),
-                  ListTile(
-                    title: const Text('Lắp Đồng Hồ Điện',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold)),
-                    subtitle: Text(
-                      'Giá: 80.000đ - 150.000đ',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                          color: Colors.black87, fontStyle: FontStyle.italic),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            new Card(
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2017/11/tho-lap-den-led-trang-tri-shop-quan-ao-thoi-trang-4.jpg',
-                    width: 400,
-                    height: 180,
-                    fit: BoxFit.cover,
-                  ),
-                  ListTile(
-                    title: const Text('Lắp mới đèn lon',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold)),
-                    subtitle: Text(
-                      'Giá: 80.000đ - 150.000đ',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                          color: Colors.black87, fontStyle: FontStyle.italic),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            new Card(
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2020/05/sua-o-dien-bi-long-3.png',
-                    width: 400,
-                    height: 180,
-                    fit: BoxFit.cover,
-                  ),
-                  ListTile(
-                    title: const Text('Sửa chập điện âm tường',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold)),
-                    subtitle: Text(
-                      'Giá: Khảo sát báo giá',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                          color: Colors.black87, fontStyle: FontStyle.italic),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            new Text(
+                "Hệ thống điện bị chập đường dây điện gây nhảy CB Aptomat không có điện thật là bất tiện trong mọi sinh hoạt:"),
+            new Text(
+                " – Bạn không thể dùng các thiết bị điện, tủ lạnh, tủ mát chứa đồ ăn sẽ nhanh chóng kém lạnh, hư hỏng đồ ăn."),
+            new Text(
+                "– Trời nóng mà không có điện để chiếc điều hòa, quạt máy hoạt động. Máy bơm nước không chạy, nhà không có nước."),
+            new Text(
+                "– Nếu Bạn là xí nghiệp, cơ sở sản xuất, quán ăn, việc không có điện nước khiến nhân viên phải tạm nghỉ, ảnh hưởng rất nhiều đến hoạt động kinh doanh."),
+            new Text(
+                "Việc sửa điện nước chỉ dành cho người có kiến thức chuyên môn, nếu Bạn chưa có kiến thức, kinh nghiệm, dụng cụ sửa chữa không nên tự ý sửa chữa kẻo tình trạng điện nước nhà bị hư nặng thêm và nguy hiểm, lúc đó Bạn tốn thêm chi phí sửa chữa."),
             new Card(
               clipBehavior: Clip.antiAlias,
               child: Column(
@@ -141,19 +67,6 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
-                  ),
-                  ListTile(
-                    title: const Text('Thay một bộ bóng đèn',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold)),
-                    subtitle: Text(
-                      'Giá: 80.000đ - 150.000đ',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                          color: Colors.black87, fontStyle: FontStyle.italic),
-                    ),
                   ),
                 ],
               ),
@@ -238,8 +151,9 @@ class ThoDienStateWidget extends State<ThoDienWidget> {
     return Scaffold(
         body: new ListView(
       children: <Widget>[
+        Padding(padding: EdgeInsets.all(5)),
         new Text(
-          "Thợ Sửa Chữa - Lắp Đặt Điện",
+          "Thợ Sửa Chữa - Lắp Đặt Điện Nước",
           textAlign: TextAlign.center,
           style: new TextStyle(
             fontSize: 24,

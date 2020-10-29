@@ -6,6 +6,7 @@ import 'views/hi.dart';
 import 'views/01_animated_container.dart';
 import 'package:flutter/material.dart';
 import 'views/thoDien.dart';
+import 'views/thoDienNuoc.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -27,6 +28,10 @@ final basicDemos = [
       name: 'Thợ Điện',
       route: ThoDienWidget.routeName,
       builder: (context) => ThoDien()),
+  Demo(
+      name: 'Thợ Điện Nước ',
+      route: ThoDienNuocWidget.routeName,
+      builder: (context) => ThoDienNuoc()),
 ];
 
 final basicDemoRoutes =

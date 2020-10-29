@@ -5,6 +5,7 @@
 import 'views/hi.dart';
 import 'views/01_animated_container.dart';
 import 'package:flutter/material.dart';
+import 'views/thoDien.dart';
 
 void main() => runApp(AnimationSamples());
 
@@ -22,6 +23,10 @@ final basicDemos = [
       name: 'AnimatedContainer',
       route: AnimatedContainerDemo.routeName,
       builder: (context) => AnimatedContainerDemo()),
+  Demo(
+      name: 'Thợ Điện',
+      route: ThoDienWidget.routeName,
+      builder: (context) => ThoDien()),
 ];
 
 final basicDemoRoutes =
@@ -35,10 +40,16 @@ class AnimationSamples extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Animation Samples',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
+          primarySwatch: Colors.deepPurple,
+          textTheme: TextTheme(
+              bodyText2: TextStyle(
+            fontSize: 16.0,
+            fontFamily: 'arial',
+            color: Colors.black,
+          ))),
       routes: allRoutes,
       home: HomePage(),
     );
@@ -56,18 +67,16 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: [
           ListTile(title: Text('Basics', style: headerStyle)),
-          ...basicDemos.map((d) => DemoTile(d)),
+          ...basicDemos.map((d) => DemoTitle(d)),
         ],
       ),
     );
   }
 }
 
-class DemoTile extends StatelessWidget {
+class DemoTitle extends StatelessWidget {
   final Demo demo;
-
-  DemoTile(this.demo);
-
+  DemoTitle(this.demo);
   @override
   Widget build(BuildContext context) {
     return ListTile(

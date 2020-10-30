@@ -7,8 +7,10 @@ import 'views/01_animated_container.dart';
 import 'package:flutter/material.dart';
 import 'views/thoDien.dart';
 import 'views/thoDienNuoc.dart';
+import 'views/thoDienLanh.dart';
+import 'views/thoMoc.dart';
 
-void main() => runApp(AnimationSamples());
+void main() => runApp(Myapp());
 
 class Demo {
   final String name;
@@ -32,6 +34,14 @@ final basicDemos = [
       name: 'Thợ Điện Nước ',
       route: ThoDienNuocWidget.routeName,
       builder: (context) => ThoDienNuoc()),
+  Demo(
+      name: 'Thợ Điện Lạnh ',
+      route: ThoDienLanhWidget.routeName,
+      builder: (context) => ThoDienLanh()),
+  Demo(
+      name: 'Thợ Mộc ',
+      route: ThoMocWidget.routeName,
+      builder: (context) => ThoMoc()),
 ];
 
 final basicDemoRoutes =
@@ -41,7 +51,7 @@ final allRoutes = <String, WidgetBuilder>{
   ...basicDemoRoutes,
 };
 
-class AnimationSamples extends StatelessWidget {
+class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

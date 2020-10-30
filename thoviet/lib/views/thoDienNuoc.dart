@@ -63,7 +63,7 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
               child: Column(
                 children: [
                   Image.network(
-                    'https://thoviet.com.vn/wp-content/uploads/2018/10/tho-lap-bong-den-dien-quan-binh-thanh.jpg',
+                    'https://thoviet.com.vn/wp-content/uploads/2017/03/Banner-sua-dien-nuoc-dien-lanh-hcm.jpg',
                     width: 400,
                     height: 180,
                     fit: BoxFit.cover,
@@ -72,19 +72,21 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
               ),
             ),
             new Text(
-              'Mạng lưới phục vụ rộng khắp TP.HCM:',
+              'Thợ Sửa Điện 1 - 3 Pha',
               textAlign: TextAlign.center,
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
-            new Text('- Thợ Việt với đội ngũ thợ chuyên sửa chữa điện nước, có nhiều năm kinh nghiệm trong nghề. Nhiều thợ có tay nghề cao, giỏi có thể sửa chữa được những ca khó.' +
-                '\n- Đội ngũ thợ phủ khắp các quận huyện tại TP Hồ Chí Minh. Sẽ nhanh có mặt để giải quyết vấn đề bạn gặp phải.' +
-                '\n- Đội ngũ thợ phủ khắp các quận huyện tại TP Hồ Chí Minh. Sẽ nhanh có mặt để giải quyết vấn đề bạn gặp phải.' +
-                '\n- Dịch vụ sửa điện tại nhà quận 1, quận 2, quận 3, quận 4, quận 5, quận 7, quận 8, quận 9, quận 10, quận 11, quận 12.' +
-                '\n- Dịch vụ sửađiện tại nhà các quận Phú Nhuận, quận Bình Thạnh, quận Gò Vấp, quận Tân Bình, quận Tân Phú, quận Thủ Đức, quận Bình Tân, H Bình Chánh.' +
-                '\n- Thợ Việt luôn lấy tinh thần trách nghiệm để đảm bảo chất lượng công trình. Bảo hành nhanh chóng.'),
+            new Text('Thợ Việt chuyên sửa chữa các trường hợp sau:' +
+                '\n– Sửa nhanh các trường hợp mất điện theo hệ thống đường dây điện.' +
+                '\n– Chuyên lắp đặt thêm ổ điện, đèn trang trí, đèn ngủ,…+ Xử lý nhanh mọi trường hợp rò điện, cháy điện, chập điện, hay điện không ổn định.' +
+                '\n– Lắp đặt đồng hồ phụ 3 pha hay 1 pha.' +
+                '\n– Kiểm tra tải cho nguồn điện, cân tách pha với điện 3 pha.' +
+                '\n– Thi công lại hệ thống điện cho gia đình, nhà ở….' +
+                '\n– Thợ lắp đặt, sửa chữa các thiết bị đèn điện, quạt trần…' +
+                '\n– Làm gọn gàng lại hệ thống mạng nội bộ, dây điện đi nổi không có ống cách điện.'),
             new GridView.count(
               padding: const EdgeInsets.all(5),
-              crossAxisCount: 3,
+              crossAxisCount: 2,
               crossAxisSpacing: 5.0,
               mainAxisSpacing: 5.0,
               shrinkWrap: true,
@@ -93,7 +95,7 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_14.jpg'),
+                          'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_dien-1-pha-tho-sua-dien.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(
@@ -106,20 +108,7 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_11.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(5.0),
-                    ),
-                  ),
-                  // padding: const EdgeInsets.all(8),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(
-                          'https://thoviet.com.vn/wp-content/uploads/2019/10/fix_15.jpg'),
+                          'https://thoviet.com.vn/wp-content/uploads/2018/11/tho-sua-dien-3-pha-tai-quan-2.jpg'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.all(
@@ -131,16 +120,112 @@ class _ThoDienNuocState extends State<ThoDienNuocWidget> {
               ],
             ),
             new Text(
-              'Bên cạnh các dịch vụ về điện, Thợ Việt còn cung cấp các dịch vụ khác như:',
+              'Thợ Sửa Ống Nước Âm - Nổi',
               textAlign: TextAlign.start,
               style: new TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
             ),
-            new Text('_ Dịch vụ sửa chữa vệ sinh lắp đặt máy lạnh.\n' +
-                '_ Sửa chữa lắp đặt thi công ống nước.\n' +
-                '_ vệ sinh bể nước bồn nước, bể chứa nước sinh hoạt  mọi dung tích.')
+            new Text('– Thi công lắp đặt, tu sửa, xữ lý các trang thiết bị tolet.\n' +
+                '– Nhận thi công lắp đặt máy nước nóng, bình nóng lạnh. +Thợ lắp đặt, sửa máy bơm nước các loại.\n' +
+                '– Chuyên sửa chữa ống nước rò rỉ âm tường âm nền.' +
+                '– Kiểm tra dò tìm rò rỉ nước xác định chính xác vị trí đường ống nước ngầm bị bể gây rò rỉ thất thoát nước.\n' +
+                '– Sửa chữa máy bơm nước, sửa bồn nước bị tràn bồn. Chống thấm tường sàn nhà vệ sinh, chống hôi nhà tắm, toilet.\n' +
+                '– Thợ lắp đặt thiết bị vệ sinh bồn cầu, lavabo, bồn tiểu. Sửa bộ xả bồn rửa tay, rửa chén bát.\n' +
+                '– Thông nghẹt ống nước, thông thoát sàn toilet, thông bồn cầu, sửa bồn cầu bị chảy nước, tắc nghẹt.\n' +
+                '– Vệ sinh bồn chứa nước gia đình, súc rửa bể chứa nước tòa nhà công ty.\n' +
+                '  Ngoài ra: Thợ Việt còn cung cấp đội ngũ thợ điện lạnh chuyên dịch vụ như lắp đặt máy lạnh, sửa điện lạnh, sửa chữa máy lạnh, tủ lạnh, vệ sinh rửa máy lạnh, lắp đặt, sửa chữa vệ sinh máy giặt, lắp đặt sửa chữa máy tắm nóng, sửa lò vi sóng….\n'),
+            new GridView.count(
+              padding: const EdgeInsets.all(5),
+              crossAxisCount: 2,
+              crossAxisSpacing: 5.0,
+              mainAxisSpacing: 5.0,
+              shrinkWrap: true,
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(
+                          'https://thoviet.com.vn/wp-content/uploads/2018/12/Lap-ong-nuoc-nong-nang-luong-mat-troi-cho-nha-dan-tan-phu-1.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(5.0),
+                    ),
+                  ),
+                  // padding: const EdgeInsets.all(8),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(
+                          'https://thoviet.com.vn/wp-content/uploads/2018/12/Lap-ong-nuoc-nong-nang-luong-mat-troi-cho-nha-dan-tan-phu-8.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(5.0),
+                    ),
+                  ),
+                  // padding: const EdgeInsets.all(8),
+                ),
+              ],
+            ),
+            new Text(
+              'Nguyên tắc làm việc – Quy trình của thợ sửa điện nước Thợ Việt:',
+              textAlign: TextAlign.start,
+              style: new TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+            new Text(
+              'I. Nguyên tắc làm việc của Thợ Việt',
+              textAlign: TextAlign.start,
+              style: new TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+            new Text('_ Luôn báo giá cho Khách hàng trước khi lắp đặt, sửa chữa.\n' +
+                '_ Nhanh chóng sửa chữa kịp thời giúp Khách hàng tiết kiệm thời gian, đưa hoạt động kinh doanh, sản xuất trở lại bình thường.\n' +
+                '_ Tuyệt đối không bày vẽ câu giờ làm tốn chi phí Khách hàng, tốn thời gian chờ đợi!\n' +
+                '_ Nếu Khách hàng không hài lòng có thể gọi yêu cầu Cty đổi thợ khác!\n' +
+                'Thợ Việt có đội ngũ  kỹ thuật viên nhiệt tình chu đáo. Phong cách làm việc chuyên nghiệp và các máy móc hiện đại.\n'),
+            new Text(
+              'II. Quy trình làm việc của Thợ Việt',
+              textAlign: TextAlign.start,
+              style: new TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+            new Text('Với nhiều năm kinh nghiệm trong ngành điện nước bên cạnh đó là đội ngũ nhân viên đông đảo nhiều thợ có kinh nghiệm nhiều năm trong lĩnh vực sửa chữa thi công điện nước dân dụng, điện nước công nghiệp.\n' +
+                'Thợ Việt đã và đang hoàn thiện Quy Trình làm việc để phục vụ tốt nhất cho mọi Quý Khách. Dưới đây là quy trình làm việc của chúng tôi:\n' +
+                ' 1. Tiếp nhận thông tin Khách Hàng qua Hotline: 0903.532.938  Hoặc qua các mạng xã hôi như  ZALO, FACEBOOK.\n' +
+                '2. Nhân viên sẽ sắp xếp thợ phù hợp nhất để tiến xử lý yêu cầu của Quý Khách( vị trí, mức độ công việc,….)\n' +
+                '3. Thợ làm xong, Thợ Việt sẽ lưu thông tin của Quý Khách. Việc lưu lại thông tin này nhằm mục đích Bảo Hành cho Quý Khách. Ngoài ra nhưng thông tin này của Khách Hàng hoàn toàn được bảo mật tại công ty.\n'),
+            new Text(
+              'III. Tiếp nhận thông tin bảo hành – ý kiến đóng góp của Khách Hàng',
+              textAlign: TextAlign.start,
+              style: new TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+            new Text('Thợ Việt luôn có gắng để đem lại chất lượng dịch vụ tốt nhất cho Quý Khách. Thợ Việt luôn mong muốn nhận được các ý kiến phản hồi dịch vụ. Dưới đây là 3 cách mà Quý Khách có thể phản hồi cho Thợ Việt:\n' +
+                ' 1. Phản Hồi trực tiếp qua tổng đài công ty Hotline: 0903.532.938; hoặc liên hệ cho quản lý công ty qua số liên hệ: 0919 532 938.\n' +
+                '2. Đóng góp ý kiến phản hồi dịch vụ tại trang đánh Giá Chất Lượng Dịch Vụ của Thợ Việt.' +
+                '3. Gửi phản hồ qua FanPage  Công ty Thợ Việt hoặc bản đồ Công ty Thợ Việt.\n' +
+                'Thợ Việt luôn cố gắng bảo mang đến cho khách hàng những dịch vụ tốt nhất với giá thành rẻ nhất.\n'),
+            new Text(
+              'Khi có nhu cầu lắp đặt, sửa chữa điện nước hãy liên hệ ngay cho Thợ Việt để được thi công xử lý nhanh chóng. Rất hân hạnh được phục vụ khách hàng.',
+              textAlign: TextAlign.start,
+              style: new TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
           ],
         ))
       ],
